@@ -1,2 +1,2 @@
-# Reposotory1-txt
+# Repository1-txt
 Game Design Project
