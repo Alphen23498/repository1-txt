@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://4pqund3nukl7"]
+
+[ext_resource type="Script" uid="uid://ba27sa137jhjv" path="res://new_script.gd" id="1_wtcfe"]
+
+[node name="Node2D" type="Node2D" unique_id=1683392433]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1731613393]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1502680197]
+script = ExtResource("1_wtcfe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=523674181]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=673979469]
