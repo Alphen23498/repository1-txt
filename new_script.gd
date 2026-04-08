@@ -1,22 +1,28 @@
 extends CharacterBody2D
 
-@export var gravity = 10 # pixels per second per second
+@export var gravity = 1000 # pixels per second per second
+@export var maximum_jumps = 100
+@export var current_jumps = 0
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+@onready var starting_position = position
 
+func reset():
+	current_jumps = 0
+	velocity = Vector2.ZERO
+	position = starting_position 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta: float) -> void:
-	
-
-	
+func _physics_process(delta: float) -> void:	
 	velocity.y += gravity * delta
 	
-	if Input.is_key_pressed(KEY_W) and is_on_floor():
-		velocity.y = -275
-	
+	if Input.is_action_just_pressed("jump") and current_jumps < maximum_jumps:
+		current_jumps += 1
+		velocity.y = -150
+		velocity.x =  150
 
 	move_and_slide()
+	
+	if is_on_floor():
+		velocity.x = 0
+		current_jumps = 0
 	
