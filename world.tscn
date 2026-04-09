@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://4pqund3nukl7"]
+
+[ext_resource type="Texture2D" uid="uid://bpw7qaonjcbdm" path="res://Background.png" id="1_aqk2v"]
+[ext_resource type="PackedScene" uid="uid://ia3ply1cgbk8" path="res://box.tscn" id="1_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="2_aqk2v"]
+[ext_resource type="PackedScene" uid="uid://qpiur157tqvh" path="res://kill_zone.tscn" id="3_tlwt5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tlwt5"]
+size = Vector2(579.25, 20)
+
+[node name="World" type="Node2D" unique_id=418265134]
+
+[node name="Background" type="Parallax2D" parent="." unique_id=346636672]
+repeat_size = Vector2(128, 32)
+repeat_times = 100
+
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=168178196]
+position = Vector2(0, -20)
+texture = ExtResource("1_aqk2v")
+
+[node name="Box" parent="." unique_id=19338825 instance=ExtResource("1_tlwt5")]
+position = Vector2(2, 10)
+
+[node name="Box2" parent="." unique_id=2079414115 instance=ExtResource("1_tlwt5")]
+position = Vector2(168, 21)
+
+[node name="Box5" parent="." unique_id=616559881 instance=ExtResource("1_tlwt5")]
+position = Vector2(229, 34)
+
+[node name="Box3" parent="." unique_id=2038761974 instance=ExtResource("1_tlwt5")]
+position = Vector2(106, -14)
+
+[node name="Box4" parent="." unique_id=1457667000 instance=ExtResource("1_tlwt5")]
+position = Vector2(57, 3)
+
+[node name="Player" parent="." unique_id=915099845 instance=ExtResource("2_aqk2v")]
+position = Vector2(0, -100)
+
+[node name="KillZone" parent="." unique_id=910027438 instance=ExtResource("3_tlwt5")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=270964519]
+position = Vector2(157, 125)
+shape = SubResource("RectangleShape2D_tlwt5")
