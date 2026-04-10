@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://qpiur157tqvh" path="res://kill_zone.tscn" id="3_tlwt5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tlwt5"]
-size = Vector2(579.25, 20)
+size = Vector2(1040.625, 20)
 
 [node name="World" type="Node2D" unique_id=418265134]
 
@@ -20,6 +20,21 @@ texture = ExtResource("1_aqk2v")
 
 [node name="Box" parent="." unique_id=19338825 instance=ExtResource("1_tlwt5")]
 position = Vector2(2, 10)
+
+[node name="Box7" parent="." unique_id=1460506902 instance=ExtResource("1_tlwt5")]
+position = Vector2(629, 57)
+
+[node name="Box8" parent="." unique_id=943891513 instance=ExtResource("1_tlwt5")]
+position = Vector2(529, 58)
+
+[node name="Box9" parent="." unique_id=251397714 instance=ExtResource("1_tlwt5")]
+position = Vector2(467, 73)
+
+[node name="Box10" parent="." unique_id=982875310 instance=ExtResource("1_tlwt5")]
+position = Vector2(386, 56)
+
+[node name="Box11" parent="." unique_id=1937244336 instance=ExtResource("1_tlwt5")]
+position = Vector2(304, 57)
 
 [node name="Box2" parent="." unique_id=2079414115 instance=ExtResource("1_tlwt5")]
 position = Vector2(168, 21)
@@ -39,5 +54,5 @@ position = Vector2(0, -100)
 [node name="KillZone" parent="." unique_id=910027438 instance=ExtResource("3_tlwt5")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=270964519]
-position = Vector2(157, 125)
+position = Vector2(387.6875, 125)
 shape = SubResource("RectangleShape2D_tlwt5")
