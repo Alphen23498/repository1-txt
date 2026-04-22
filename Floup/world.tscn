@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://4pqund3nukl7"]
 
-[ext_resource type="Texture2D" uid="uid://bpw7qaonjcbdm" path="res://Background.png" id="1_aqk2v"]
-[ext_resource type="PackedScene" uid="uid://ia3ply1cgbk8" path="res://box.tscn" id="1_tlwt5"]
-[ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="2_aqk2v"]
-[ext_resource type="PackedScene" uid="uid://qpiur157tqvh" path="res://kill_zone.tscn" id="3_tlwt5"]
+[ext_resource type="Texture2D" uid="uid://bpw7qaonjcbdm" path="res://Assets/Background.png" id="1_aqk2v"]
+[ext_resource type="PackedScene" uid="uid://ia3ply1cgbk8" path="res://Floup/box.tscn" id="1_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://Floup/player.tscn" id="2_aqk2v"]
+[ext_resource type="PackedScene" uid="uid://qpiur157tqvh" path="res://Floup/kill_zone.tscn" id="3_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://dn2dy542e5hg4" path="res://Floup/planet.tscn" id="5_4qdsj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tlwt5"]
-size = Vector2(1040.625, 20)
+size = Vector2(1326.625, 20)
 
 [node name="World" type="Node2D" unique_id=418265134]
 
@@ -22,7 +23,7 @@ texture = ExtResource("1_aqk2v")
 position = Vector2(2, 10)
 
 [node name="Box7" parent="." unique_id=1460506902 instance=ExtResource("1_tlwt5")]
-position = Vector2(629, 57)
+position = Vector2(622, 58)
 
 [node name="Box8" parent="." unique_id=943891513 instance=ExtResource("1_tlwt5")]
 position = Vector2(529, 58)
@@ -54,5 +55,26 @@ position = Vector2(0, -100)
 [node name="KillZone" parent="." unique_id=910027438 instance=ExtResource("3_tlwt5")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=270964519]
-position = Vector2(387.6875, 125)
+position = Vector2(530.6875, 125)
 shape = SubResource("RectangleShape2D_tlwt5")
+
+[node name="StaticBody2D" parent="." unique_id=865582474 instance=ExtResource("5_4qdsj")]
+position = Vector2(685, 73)
+
+[node name="StaticBody2D3" parent="." unique_id=856184011 instance=ExtResource("5_4qdsj")]
+position = Vector2(1089, 90)
+
+[node name="StaticBody2D4" parent="." unique_id=742898193 instance=ExtResource("5_4qdsj")]
+position = Vector2(1003, 75)
+
+[node name="StaticBody2D5" parent="." unique_id=1648800769 instance=ExtResource("5_4qdsj")]
+position = Vector2(922, 86)
+
+[node name="StaticBody2D6" parent="." unique_id=1834665834 instance=ExtResource("5_4qdsj")]
+position = Vector2(855, 62)
+
+[node name="StaticBody2D7" parent="." unique_id=890416928 instance=ExtResource("5_4qdsj")]
+position = Vector2(805, 74)
+
+[node name="StaticBody2D2" parent="." unique_id=439304438 instance=ExtResource("5_4qdsj")]
+position = Vector2(741, 54)

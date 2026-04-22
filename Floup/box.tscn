@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ia3ply1cgbk8"]
 
-[ext_resource type="Texture2D" uid="uid://y04m100jvgdp" path="res://Cabinet.png" id="1_g2tbl"]
+[ext_resource type="Texture2D" uid="uid://y04m100jvgdp" path="res://Assets/Cabinet.png" id="1_g2tbl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_epypp"]
 size = Vector2(33, 32)
