@@ -6,9 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://qpiur157tqvh" path="res://Floup/kill_zone.tscn" id="3_tlwt5"]
 [ext_resource type="PackedScene" uid="uid://dn2dy542e5hg4" path="res://Floup/planet.tscn" id="5_4qdsj"]
 [ext_resource type="PackedScene" uid="uid://d0lryi26yd36c" path="res://ship.tscn" id="6_hcq5y"]
+[ext_resource type="Script" uid="uid://mernhpwki5pt" path="res://Floup/kill_zone.gd" id="7_r41gb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tlwt5"]
 size = Vector2(1326.625, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lhtys"]
+size = Vector2(52, 60)
 
 [node name="World" type="Node2D" unique_id=418265134]
 
@@ -82,3 +86,10 @@ position = Vector2(741, 54)
 
 [node name="StaticBody2D8" parent="." unique_id=1162348305 instance=ExtResource("6_hcq5y")]
 position = Vector2(1202, 115)
+
+[node name="NEXT LEVEL" type="Area2D" parent="." unique_id=1189951387]
+script = ExtResource("7_r41gb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NEXT LEVEL" unique_id=768887784]
+position = Vector2(1248, 30)
+shape = SubResource("RectangleShape2D_lhtys")
