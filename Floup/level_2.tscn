@@ -4,23 +4,25 @@
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://Floup/player.tscn" id="3_hyr8u"]
 [ext_resource type="PackedScene" uid="uid://qpiur157tqvh" path="res://Floup/kill_zone.tscn" id="4_75lbf"]
 [ext_resource type="PackedScene" uid="uid://d0lryi26yd36c" path="res://ship.tscn" id="6_2rd8c"]
+[ext_resource type="PackedScene" uid="uid://cee7stike722d" path="res://Floup/level_3.tscn" id="6_ql07h"]
+[ext_resource type="PackedScene" uid="uid://cb3xeyy2e4vpv" path="res://Floup/shelf.tscn" id="7_o6o8x"]
 [ext_resource type="Script" uid="uid://mernhpwki5pt" path="res://Floup/kill_zone.gd" id="7_sjwvu"]
 [ext_resource type="Texture2D" uid="uid://cicqo18yc6nvl" path="res://Assets/PORTAL.png" id="8_uc2yq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tlwt5"]
 size = Vector2(1326.625, 20)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lhtys"]
-size = Vector2(51, 60)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o6o8x"]
+size = Vector2(25, 50)
 
-[node name="Level1" type="Node2D" unique_id=418265134]
+[node name="Level2" type="Node2D" unique_id=418265134]
 
 [node name="Background" type="Parallax2D" parent="." unique_id=346636672]
 repeat_size = Vector2(128, 32)
 repeat_times = 100
 
 [node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=168178196]
-position = Vector2(0, -20)
+position = Vector2(-1, -31)
 texture = ExtResource("1_ql07h")
 
 [node name="Player" parent="." unique_id=915099845 instance=ExtResource("3_hyr8u")]
@@ -37,12 +39,63 @@ position = Vector2(1202, 115)
 
 [node name="NEXT LEVEL" type="Area2D" parent="." unique_id=1189951387]
 script = ExtResource("7_sjwvu")
+next_level = ExtResource("6_ql07h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NEXT LEVEL" unique_id=768887784]
-position = Vector2(1247.5, 30)
-shape = SubResource("RectangleShape2D_lhtys")
+position = Vector2(1241.5, 36)
+shape = SubResource("RectangleShape2D_o6o8x")
 
 [node name="Sprite2D" type="Sprite2D" parent="NEXT LEVEL" unique_id=1441844004]
-position = Vector2(1247.5, 30)
+position = Vector2(1244.0001, 31)
 scale = Vector2(0.79687357, 0.9375)
 texture = ExtResource("8_uc2yq")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=346359316]
+
+[node name="StaticBody2D2" parent="." unique_id=19338825 instance=ExtResource("7_o6o8x")]
+position = Vector2(1, -7)
+
+[node name="StaticBody2D15" parent="." unique_id=1255475072 instance=ExtResource("7_o6o8x")]
+position = Vector2(1, -7)
+
+[node name="StaticBody2D18" parent="." unique_id=2014997599 instance=ExtResource("7_o6o8x")]
+position = Vector2(1020, 58)
+
+[node name="StaticBody2D16" parent="." unique_id=1642663983 instance=ExtResource("7_o6o8x")]
+position = Vector2(935, 75)
+
+[node name="StaticBody2D17" parent="." unique_id=1659363496 instance=ExtResource("7_o6o8x")]
+position = Vector2(823, 79)
+
+[node name="StaticBody2D11" parent="." unique_id=481302752 instance=ExtResource("7_o6o8x")]
+position = Vector2(764, 58)
+
+[node name="StaticBody2D12" parent="." unique_id=691657835 instance=ExtResource("7_o6o8x")]
+position = Vector2(689, -78)
+
+[node name="StaticBody2D13" parent="." unique_id=1537348158 instance=ExtResource("7_o6o8x")]
+position = Vector2(634, -32)
+
+[node name="StaticBody2D14" parent="." unique_id=2073756212 instance=ExtResource("7_o6o8x")]
+position = Vector2(578, 4)
+
+[node name="StaticBody2D4" parent="." unique_id=1957621736 instance=ExtResource("7_o6o8x")]
+position = Vector2(492, 21)
+
+[node name="StaticBody2D5" parent="." unique_id=1203284617 instance=ExtResource("7_o6o8x")]
+position = Vector2(383, 7)
+
+[node name="StaticBody2D6" parent="." unique_id=1101590880 instance=ExtResource("7_o6o8x")]
+position = Vector2(289, -106)
+
+[node name="StaticBody2D7" parent="." unique_id=2026192828 instance=ExtResource("7_o6o8x")]
+position = Vector2(235, -72)
+
+[node name="StaticBody2D9" parent="." unique_id=765021089 instance=ExtResource("7_o6o8x")]
+position = Vector2(180, -45)
+
+[node name="StaticBody2D10" parent="." unique_id=1184378709 instance=ExtResource("7_o6o8x")]
+position = Vector2(116, -10)
+
+[node name="StaticBody2D3" parent="." unique_id=629035539 instance=ExtResource("7_o6o8x")]
+position = Vector2(45, -28)

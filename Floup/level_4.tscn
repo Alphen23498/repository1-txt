@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://c4pkfn8lv631"]
+
+[ext_resource type="Texture2D" uid="uid://bpw7qaonjcbdm" path="res://Assets/Background.png" id="1_t38hm"]
+[ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://Floup/player.tscn" id="2_bpkkr"]
+[ext_resource type="PackedScene" uid="uid://qpiur157tqvh" path="res://Floup/kill_zone.tscn" id="3_h3ail"]
+[ext_resource type="PackedScene" uid="uid://d0lryi26yd36c" path="res://ship.tscn" id="4_5avtj"]
+[ext_resource type="Script" uid="uid://mernhpwki5pt" path="res://Floup/kill_zone.gd" id="5_32bvm"]
+[ext_resource type="Texture2D" uid="uid://cicqo18yc6nvl" path="res://Assets/PORTAL.png" id="6_j1ms5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tlwt5"]
+size = Vector2(1326.625, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lhtys"]
+size = Vector2(51, 60)
+
+[node name="Level1" type="Node2D" unique_id=418265134]
+
+[node name="Background" type="Parallax2D" parent="." unique_id=346636672]
+repeat_size = Vector2(128, 32)
+repeat_times = 100
+
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=168178196]
+position = Vector2(0, -20)
+texture = ExtResource("1_t38hm")
+
+[node name="Player" parent="." unique_id=915099845 instance=ExtResource("2_bpkkr")]
+position = Vector2(0, -100)
+
+[node name="KillZone" parent="." unique_id=910027438 instance=ExtResource("3_h3ail")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=270964519]
+position = Vector2(530.6875, 125)
+shape = SubResource("RectangleShape2D_tlwt5")
+
+[node name="StaticBody2D8" parent="." unique_id=1162348305 instance=ExtResource("4_5avtj")]
+position = Vector2(1202, 115)
+
+[node name="NEXT LEVEL" type="Area2D" parent="." unique_id=1189951387]
+script = ExtResource("5_32bvm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NEXT LEVEL" unique_id=768887784]
+position = Vector2(1247.5, 30)
+shape = SubResource("RectangleShape2D_lhtys")
+
+[node name="Sprite2D" type="Sprite2D" parent="NEXT LEVEL" unique_id=1441844004]
+position = Vector2(1247.5, 30)
+scale = Vector2(0.79687357, 0.9375)
+texture = ExtResource("6_j1ms5")

@@ -6,7 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://qpiur157tqvh" path="res://Floup/kill_zone.tscn" id="4_7kt38"]
 [ext_resource type="PackedScene" uid="uid://dn2dy542e5hg4" path="res://Floup/planet.tscn" id="5_l1jkg"]
 [ext_resource type="PackedScene" uid="uid://d0lryi26yd36c" path="res://ship.tscn" id="6_ltlsd"]
-[ext_resource type="Script" uid="uid://mernhpwki5pt" path="res://Floup/kill_zone.gd" id="7_76jup"]
+[ext_resource type="Script" uid="uid://bcwgbqomarwm4" path="res://Floup/next_level.gd" id="7_n4r3w"]
+[ext_resource type="PackedScene" uid="uid://c5y78v23eotfx" path="res://Floup/level_2.tscn" id="8_ubg0r"]
 [ext_resource type="Texture2D" uid="uid://cicqo18yc6nvl" path="res://Assets/PORTAL.png" id="8_y2t0c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tlwt5"]
@@ -89,7 +90,8 @@ position = Vector2(741, 54)
 position = Vector2(1202, 115)
 
 [node name="NEXT LEVEL" type="Area2D" parent="." unique_id=1189951387]
-script = ExtResource("7_76jup")
+script = ExtResource("7_n4r3w")
+next_level = ExtResource("8_ubg0r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NEXT LEVEL" unique_id=768887784]
 position = Vector2(1247.5, 30)
