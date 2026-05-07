@@ -35,18 +35,18 @@ position = Vector2(530.6875, 125)
 shape = SubResource("RectangleShape2D_tlwt5")
 
 [node name="StaticBody2D8" parent="." unique_id=1162348305 instance=ExtResource("6_2rd8c")]
-position = Vector2(1202, 115)
+position = Vector2(1135, 111.00001)
 
 [node name="NEXT LEVEL" type="Area2D" parent="." unique_id=1189951387]
 script = ExtResource("5_ql07h")
 next_level = ExtResource("6_ql07h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NEXT LEVEL" unique_id=768887784]
-position = Vector2(1241.5, 36)
+position = Vector2(1204, 31)
 shape = SubResource("RectangleShape2D_o6o8x")
 
 [node name="Sprite2D" type="Sprite2D" parent="NEXT LEVEL" unique_id=1441844004]
-position = Vector2(1241.0001, 31.000002)
+position = Vector2(1203, 28.000004)
 scale = Vector2(0.79687357, 0.9375)
 texture = ExtResource("8_uc2yq")
 
@@ -59,7 +59,7 @@ position = Vector2(1, -7)
 position = Vector2(1, -7)
 
 [node name="StaticBody2D18" parent="." unique_id=2014997599 instance=ExtResource("7_o6o8x")]
-position = Vector2(1020, 58)
+position = Vector2(1011, 67)
 
 [node name="StaticBody2D16" parent="." unique_id=1642663983 instance=ExtResource("7_o6o8x")]
 position = Vector2(935, 75)

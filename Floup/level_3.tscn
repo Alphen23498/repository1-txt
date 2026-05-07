@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://d0lryi26yd36c" path="res://ship.tscn" id="4_xkpkc"]
 [ext_resource type="Script" uid="uid://mernhpwki5pt" path="res://Floup/kill_zone.gd" id="5_tp6qp"]
 [ext_resource type="Texture2D" uid="uid://cicqo18yc6nvl" path="res://Assets/PORTAL.png" id="6_umlwg"]
+[ext_resource type="PackedScene" uid="uid://bscufo08wbw4u" path="res://Floup/MUSHROOM.tscn" id="7_bwlyf"]
+[ext_resource type="PackedScene" uid="uid://cbb6u8lu02dql" path="res://SPIKE.tscn" id="8_gesor"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tlwt5"]
 size = Vector2(1326.625, 20)
@@ -20,7 +22,7 @@ repeat_size = Vector2(128, 32)
 repeat_times = 100
 
 [node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=168178196]
-position = Vector2(0, -20)
+position = Vector2(8, -25)
 texture = ExtResource("1_nlxds")
 
 [node name="Player" parent="." unique_id=915099845 instance=ExtResource("2_bwlyf")]
@@ -46,3 +48,67 @@ shape = SubResource("RectangleShape2D_lhtys")
 position = Vector2(1247.5, 30)
 scale = Vector2(0.79687357, 0.9375)
 texture = ExtResource("6_umlwg")
+
+[node name="StaticBody2D" parent="." unique_id=19338825 instance=ExtResource("7_bwlyf")]
+position = Vector2(1, -21)
+
+[node name="StaticBody2D15" parent="." unique_id=244053103 instance=ExtResource("7_bwlyf")]
+position = Vector2(250, -21)
+
+[node name="StaticBody2D16" parent="." unique_id=1417361655 instance=ExtResource("7_bwlyf")]
+position = Vector2(234, -21)
+
+[node name="StaticBody2D17" parent="." unique_id=222943554 instance=ExtResource("7_bwlyf")]
+position = Vector2(218, -21)
+
+[node name="StaticBody2D18" parent="." unique_id=567166960 instance=ExtResource("7_bwlyf")]
+position = Vector2(201, -21)
+
+[node name="StaticBody2D19" parent="." unique_id=1484952029 instance=ExtResource("7_bwlyf")]
+position = Vector2(185, -21)
+
+[node name="StaticBody2D2" parent="." unique_id=311071312 instance=ExtResource("7_bwlyf")]
+position = Vector2(168, -21)
+
+[node name="StaticBody2D7" parent="." unique_id=864815184 instance=ExtResource("7_bwlyf")]
+position = Vector2(153, -21)
+
+[node name="StaticBody2D9" parent="." unique_id=1131464466 instance=ExtResource("7_bwlyf")]
+position = Vector2(141, -21)
+
+[node name="StaticBody2D10" parent="." unique_id=1318841462 instance=ExtResource("7_bwlyf")]
+position = Vector2(127, -21)
+
+[node name="StaticBody2D11" parent="." unique_id=226871364 instance=ExtResource("7_bwlyf")]
+position = Vector2(111, -21)
+
+[node name="StaticBody2D12" parent="." unique_id=1141139876 instance=ExtResource("7_bwlyf")]
+position = Vector2(94, -21)
+
+[node name="StaticBody2D13" parent="." unique_id=1703394990 instance=ExtResource("7_bwlyf")]
+position = Vector2(105, -63)
+
+[node name="StaticBody2D14" parent="." unique_id=1762478668 instance=ExtResource("7_bwlyf")]
+position = Vector2(93, -63)
+
+[node name="StaticBody2D3" parent="." unique_id=1286567844 instance=ExtResource("7_bwlyf")]
+position = Vector2(76, -63)
+
+[node name="StaticBody2D4" parent="." unique_id=1918806032 instance=ExtResource("7_bwlyf")]
+position = Vector2(47, -21)
+
+[node name="StaticBody2D5" parent="." unique_id=1819654130 instance=ExtResource("7_bwlyf")]
+position = Vector2(32, -21)
+
+[node name="StaticBody2D6" parent="." unique_id=549377885 instance=ExtResource("7_bwlyf")]
+position = Vector2(18, -21)
+
+[node name="StaticBody2D20" parent="." unique_id=1185459559 instance=ExtResource("8_gesor")]
+position = Vector2(148, -45)
+
+[node name="StaticBody2D21" parent="." unique_id=307238327 instance=ExtResource("8_gesor")]
+position = Vector2(208, -45)
+
+[node name="KillZone" parent="StaticBody2D21" unique_id=472435178 instance=ExtResource("3_gesor")]
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="StaticBody2D21/KillZone" unique_id=936504499]
